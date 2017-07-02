@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="268.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="41.0" layoutY="106.0" prefHeight="200.0" prefWidth="179.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="实体类" />
+          <TableColumn prefWidth="75.0" text="操作" />
+        </columns>
+      </TableView>
+      <Label layoutX="41.0" layoutY="26.0" text="选择Model">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

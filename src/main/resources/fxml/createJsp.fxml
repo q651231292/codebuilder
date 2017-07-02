@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rgy.codebuilder.controller.CreateJspController">
+   <children>
+      <Label layoutX="43.0" layoutY="37.0" text="生成JSP页面">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="43.0" layoutY="119.0" mnemonicParsing="false" onAction="#selectModel" text="选择实体类">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="classAllName" layoutX="141.0" layoutY="189.0" />
+      <Label layoutX="58.0" layoutY="191.0" text="类名">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="232.0" text="类注释">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="classComment" layoutX="141.0" layoutY="230.0" />
+      <Button fx:id="createJsp" layoutX="252.0" layoutY="503.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="90.0" text="生成">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="44.0" layoutY="286.0" prefHeight="200.0" prefWidth="505.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="属性名" />
+          <TableColumn prefWidth="75.0" text="属性注释" />
+            <TableColumn prefWidth="99.0" text="是否显示" />
+            <TableColumn prefWidth="88.0" text="是否为查询条件" />
+        </columns>
+      </TableView>
+      <Button layoutX="494.0" layoutY="44.0" mnemonicParsing="false" onAction="#back" prefHeight="28.0" prefWidth="63.0" text="返回" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="279.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rgy.codebuilder.controller.template.AddTempDetailToController">
+   <children>
+      <Label layoutX="46.0" layoutY="40.0" text="新增模版-基础信息">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="123.0" prefHeight="42.0" prefWidth="78.0" text="模板名称">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="247.0" layoutY="205.0" mnemonicParsing="false" onAction="#addTemp" prefHeight="28.0" prefWidth="107.0" text="保存">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="481.0" layoutY="33.0" mnemonicParsing="false" onAction="#back" prefHeight="28.0" prefWidth="62.0" text="返回" />
+      <TextField fx:id="tempName" layoutX="168.0" layoutY="126.0" prefHeight="42.0" prefWidth="378.0" />
+   </children>
+</AnchorPane>

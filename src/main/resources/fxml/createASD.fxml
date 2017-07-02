@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rgy.codebuilder.controller.CreateASDController">
+   <children>
+      <Label layoutX="42.0" layoutY="36.0" text="生成Action/Service/Dao">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="109.0" text="包名">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="165.0" text="类全名">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="packageName" layoutX="130.0" layoutY="112.0" prefHeight="23.0" prefWidth="237.0" promptText="com.rgy" text="com.rgy" />
+      <TextField fx:id="classAllName" layoutX="130.0" layoutY="167.0" prefHeight="23.0" prefWidth="237.0" promptText="com.rgy.model.Dept" text="com.rgy.model.Dept" />
+      <Button layoutX="396.0" layoutY="101.0" mnemonicParsing="false" onAction="#createASD" prefHeight="148.0" prefWidth="160.0" text="生成">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="497.0" layoutY="43.0" mnemonicParsing="false" onAction="#back" prefHeight="28.0" prefWidth="63.0" text="返回" />
+      <TextField fx:id="diskPath" layoutX="130.0" layoutY="219.0" prefHeight="23.0" prefWidth="237.0" promptText="d:/" text="d:/" />
+      <Label layoutX="27.0" layoutY="217.0" text="磁盘路径">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="268.0" text="模版">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="396.0" layoutY="271.0" mnemonicParsing="false" onAction="#addTempListTo" prefHeight="23.0" prefWidth="160.0" text="模版管理" />
+      <ComboBox fx:id="tempList" layoutX="130.0" layoutY="271.0" onAction="#selectTempList" prefHeight="23.0" prefWidth="237.0" promptText="请选择一个模版" />
+   </children>
+</AnchorPane>

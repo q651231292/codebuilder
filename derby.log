@@ -1,0 +1,32 @@
+----------------------------------------------------------------
+Sun Jul 02 12:59:40 CST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015d-01ab-25c8-000006320718 
+on database directory D:\Workspaces\netbeans\codebuilder\db with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/D:/Workspaces/netbeans/codebuilder/target/codebuilder-1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=D:\Workspaces\netbeans\codebuilder
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Jul 02 12:59:40 CST 2017:
+Shutting down instance a816c00e-015d-01ab-25c8-000006320718 on database directory D:\Workspaces\netbeans\codebuilder\db with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+----------------------------------------------------------------
+Sun Jul 02 12:59:46 CST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a02ac013-015d-01ab-25c8-000006320718 
+on database directory D:\Workspaces\netbeans\codebuilder\db with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/D:/Workspaces/netbeans/codebuilder/target/codebuilder-1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=D:\Workspaces\netbeans\codebuilder
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Jul 02 12:59:47 CST 2017:
+Shutting down instance a02ac013-015d-01ab-25c8-000006320718 on database directory D:\Workspaces\netbeans\codebuilder\db with class loader sun.misc.Launcher$AppClassLoader@42a57993 

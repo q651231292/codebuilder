@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rgy.codebuilder.controller.CreateModelController">
+   <children>
+      <Label layoutX="29.0" layoutY="24.0" text="生成Model">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="outFolder" layoutX="243.0" layoutY="103.0" />
+      <Label layoutX="47.0" layoutY="100.0" text="选择输出文件夹">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="155.0" text="类全名">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="classAllName" layoutX="243.0" layoutY="158.0" />
+      <Button layoutX="47.0" layoutY="217.0" mnemonicParsing="false" onAction="#addAttr" text="添加属性" />
+      <Button layoutX="127.0" layoutY="217.0" mnemonicParsing="false" onAction="#delAttr" text="删除属性" />
+      <TableView layoutX="43.0" layoutY="251.0" prefHeight="153.0" prefWidth="489.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="名称" />
+          <TableColumn prefWidth="75.0" text="JAVA类型" />
+            <TableColumn prefWidth="75.0" text="DB类型" />
+            <TableColumn prefWidth="75.0" text="注释" />
+            <TableColumn prefWidth="75.0" text="是否为主键" />
+        </columns>
+      </TableView>
+      <Button layoutX="250.0" layoutY="465.0" mnemonicParsing="false" onAction="#createModel" text="创建实体类" />
+      <Button layoutX="244.0" layoutY="527.0" mnemonicParsing="false" onAction="#createDbTable" text="创建数据库表" />
+      <Separator layoutY="200.0" prefHeight="3.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0" />
+      <Separator layoutY="440.0" prefHeight="3.0" prefWidth="600.0" />
+      <Separator layoutY="500.0" prefHeight="3.0" prefWidth="600.0" />
+      <Button layoutX="501.0" layoutY="31.0" mnemonicParsing="false" onAction="#back" prefHeight="28.0" prefWidth="63.0" text="返回" />
+   </children>
+</AnchorPane>
