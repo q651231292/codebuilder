@@ -1,25 +1,40 @@
 package com.rgy.codebuilder.controller.template;
 
 import com.rgy.codebuilder.App;
+import com.rgy.codebuilder.model.Temp;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 /**
  * Created by Administrator on 2017/7/2.
  */
 public class AddTempActionToController implements Initializable {
+
+    @FXML
+    private TextArea actionTemp;
+    
+    boolean isAdd = true ; 
+    
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+         if(Temp.id != null){
+              isAdd = false;
+              actionTemp.setText(Temp.action);
+         }
+         
     }
 
+    @FXML
     public void toService(ActionEvent actionEvent) {
-        System.out.println("跳转到service模板页-准备");
+        Temp.action = actionTemp.getText();
         App.replaceScene("template/addTempServiceTo.fxml");
-        System.out.println("跳转到service模板页-完毕");
     }
 
     public void addTemp(ActionEvent actionEvent) {
@@ -28,6 +43,7 @@ public class AddTempActionToController implements Initializable {
     public void toTempDetail(ActionEvent actionEvent) {
     }
 
+    @FXML
     public void back(ActionEvent actionEvent) {
         App.replaceScene("template/tempManager.fxml");
     }

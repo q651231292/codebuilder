@@ -1,0 +1,32 @@
+
+package (packName).action;
+
+import (modelName);
+import java.util.HashMap;
+import java.util.Map;
+
+public class (modelShortName)Action {
+
+    Map<String, Object> result;
+
+    public boolean add(modelShortName)((modelShortName) (modelShortNameObj)) {
+
+        return true;
+    }
+
+    public boolean delete(modelShortName)((modelShortName) (modelShortNameObj)) {
+
+        return true;
+    }
+
+    public boolean update(modelShortName)((modelShortName) (modelShortNameObj)) {
+
+        return true;
+    }
+
+    public Map<String, Object> query(modelShortName)((modelShortName) (modelShortNameObj)) {
+        result = new HashMap<>();
+
+        return result;
+    }
+}

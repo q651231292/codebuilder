@@ -1,29 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.rgy.test;
 
 import com.rgy.codebuilder.tool.DerbyJdbc;
-import java.io.ByteArrayOutputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import static org.hamcrest.CoreMatchers.is;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- *
- * @author Administrator
- */
 public class CreateTable {
 
     public CreateTable() {
@@ -45,9 +31,6 @@ public class CreateTable {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
     @Test
     public void hello() {
         System.out.println(11);
@@ -90,6 +73,23 @@ public class CreateTable {
         sql += "insert into temp values('"+id+"','temp"+id+"',?,?,?,?,?)";
 
         dj.dml(sql, action, service, serviceImpl, dao, daoImpl);
+    }
+    @Test
+    public void deltemp() {
+        DerbyJdbc dj = new DerbyJdbc();
+        String id = "f6f0425b-ee6c-4b5b-ae48-0e7cbcc19764";
+       String sql = "delete from temp where id = '"+id+"'";
+
+        dj.dml(sql);
+    }
+    @Test
+    public void updatetemp() {
+        DerbyJdbc dj = new DerbyJdbc();
+        String id = "e78207bb-3342-46f1-b7a5-fb843cc8f546";
+        String name = "模板2";
+       String sql = "update temp set name = '"+name+"' where id = '"+id+"'";
+
+        dj.dml(sql);
     }
 
     @Test
