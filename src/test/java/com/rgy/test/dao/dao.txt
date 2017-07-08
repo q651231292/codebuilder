@@ -1,0 +1,16 @@
+
+package (packName).dao;
+
+import (modelName);
+import java.util.Map;
+
+public interface (modelShortName)Dao {
+    
+    boolean add(modelShortName)((modelShortName) (modelShortNameObj)) ;
+
+    boolean delete(modelShortName)((modelShortName) (modelShortNameObj)) ;
+
+    boolean update(modelShortName)((modelShortName) (modelShortNameObj)) ;
+
+    Map<String, Object> query(modelShortName)((modelShortName) (modelShortNameObj));
+}

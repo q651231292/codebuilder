@@ -22,8 +22,8 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="packageName" layoutX="130.0" layoutY="112.0" prefHeight="23.0" prefWidth="237.0" promptText="com.rgy" text="com.rgy" />
-      <TextField fx:id="classAllName" layoutX="130.0" layoutY="167.0" prefHeight="23.0" prefWidth="237.0" promptText="com.rgy.model.Dept" text="com.rgy.model.Dept" />
+      <TextField fx:id="packageName" layoutX="130.0" layoutY="112.0" prefHeight="23.0" prefWidth="237.0" promptText="com.rgy.test" text="com.rgy.test" />
+      <TextField fx:id="classAllName" layoutX="130.0" layoutY="167.0" prefHeight="23.0" prefWidth="237.0" promptText="com.rgy.test.model.Emp" text="com.rgy.test.model.Emp" />
       <Button layoutX="396.0" layoutY="101.0" mnemonicParsing="false" onAction="#createASD" prefHeight="148.0" prefWidth="160.0" text="生成">
          <font>
             <Font size="24.0" />

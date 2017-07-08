@@ -2,6 +2,7 @@ package com.rgy.codebuilder.controller.template;
 
 import com.rgy.codebuilder.App;
 import com.rgy.codebuilder.model.Temp;
+import com.rgy.codebuilder.model.Templation;
 import com.rgy.codebuilder.tool.DerbyJdbc;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -10,8 +11,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -87,36 +86,5 @@ public class TempManagerController implements Initializable {
         App.replaceScene("createASD.fxml");
     }
 
-    public static class Templation {
 
-        private StringProperty id;
-        private StringProperty name;
-
-        private Templation(String id, String name) {
-            this.id = new SimpleStringProperty(id);
-            this.name = new SimpleStringProperty(name);
-        }
-
-        public void setId(String id) {
-            this.id = new SimpleStringProperty(id);
-        }
-
-        public void setName(String name) {
-            this.name = new SimpleStringProperty(name);
-        }
-
-        public String getId() {
-            return id.getValue();
-        }
-
-        public String getName() {
-            return name.getValue();
-        }
-
-        @Override
-        public String toString() {
-            return "Templation{" + "id=" + id + ", name=" + name + '}';
-        }
-
-    }
 }

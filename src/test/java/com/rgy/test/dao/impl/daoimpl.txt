@@ -1,0 +1,38 @@
+
+package (packName).dao.impl;
+
+import com.rgy.test.dao.(modelShortName)Dao;
+import (modelName);
+import java.util.HashMap;
+import java.util.Map;
+
+public class (modelShortName)DaoImpl implements (modelShortName)Dao {
+
+    Map<String, Object> result ;
+    
+    @Override
+    public boolean add(modelShortName)((modelShortName) (modelShortNameObj)) {
+
+        return true;
+    }
+
+    @Override
+    public boolean delete(modelShortName)((modelShortName) (modelShortNameObj)) {
+
+        return true;
+    }
+
+    @Override
+    public boolean update(modelShortName)((modelShortName) (modelShortNameObj)) {
+
+        return true;
+    }
+
+    @Override
+    public Map<String, Object> query(modelShortName)((modelShortName) (modelShortNameObj)) {
+        result = new HashMap<>();
+
+        return result;
+    }
+
+}

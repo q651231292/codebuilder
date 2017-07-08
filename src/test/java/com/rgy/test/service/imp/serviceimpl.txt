@@ -1,0 +1,38 @@
+
+package (packName).service.imp;
+
+import com.rgy.test.dao.(modelShortName)Dao;
+import (modelName);
+import com.rgy.test.service.(modelShortName)Service;
+import java.util.Map;
+
+public class (modelShortName)ServiceImpl implements (modelShortName)Service {
+
+    (modelShortName)Dao (modelShortNameObj)Dao;
+    Map<String, Object> result;
+
+    @Override
+    public boolean add(modelShortName)((modelShortName) (modelShortNameObj)) {
+        boolean flg = (modelShortNameObj)Dao.add(modelShortName)((modelShortNameObj));
+        return flg;
+    }
+
+    @Override
+    public boolean delete(modelShortName)((modelShortName) (modelShortNameObj)) {
+        boolean flg = (modelShortNameObj)Dao.delete(modelShortName)((modelShortNameObj));
+        return flg;
+    }
+
+    @Override
+    public boolean update(modelShortName)((modelShortName) (modelShortNameObj)) {
+        boolean flg = (modelShortNameObj)Dao.update(modelShortName)((modelShortNameObj));
+        return flg;
+    }
+
+    @Override
+    public Map<String, Object> query(modelShortName)((modelShortName) (modelShortNameObj)) {
+        result = (modelShortNameObj)Dao.query(modelShortName)((modelShortNameObj));
+        return result;
+    }
+
+}

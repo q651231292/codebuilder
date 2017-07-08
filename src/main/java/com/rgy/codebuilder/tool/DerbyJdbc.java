@@ -49,17 +49,13 @@ public class DerbyJdbc {
 
     static void loadDriver() {
         try {
-            System.out.println("驱动程序-开始加载");
             Class.forName(driver).newInstance();
-            System.out.println("驱动程序-加载完毕");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public Connection open() {
-
-        System.out.println("数据库-正在连接");
         try {
             conn = DriverManager.getConnection(protocol + dbName + ";create=true");
         } catch (SQLException e) {
@@ -67,8 +63,6 @@ public class DerbyJdbc {
             
 
         }
-
-        System.out.println(dbName + "-已连接");
         return conn;
     }
 
@@ -76,15 +70,12 @@ public class DerbyJdbc {
         try {
             if (ps != null) {
                 ps.close();
-                System.out.println("预先声明-关闭");
             }
             if (rs != null) {
                 rs.close();
-                System.out.println("结果集-关闭");
             }
             if (conn != null) {
                 conn.close();
-                System.out.println("连接-关闭");
             }
              
         } catch (SQLException e) {

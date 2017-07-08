@@ -1,6 +1,7 @@
 package com.rgy.test;
 
 import com.rgy.codebuilder.tool.DerbyJdbc;
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -10,9 +11,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class CreateTable {
+public class CodeBuilder {
 
-    public CreateTable() {
+    public CodeBuilder() {
     }
 
     @BeforeClass
@@ -102,6 +103,27 @@ public class CreateTable {
         });
         System.out.println(list);
     }
+    @Test
+    public void packToPath() {
+        String actionPack = "com.rgy.action";
+        String servicePack = "com.rgy.service";
+        String [] pack = {actionPack,servicePack};
+        for (int i = 0; i < pack.length; i++) {
+            String p = pack[i];
+            p = p.replace(".", File.separator);
+            System.out.println(p);
+        }
+    }
+    @Test
+    public void findStr() {
+        String str = "package com.rgy.test.dao;";
+        int begin  = str.indexOf("package");
+        int end = str.indexOf("package")+"package".length();
+        System.out.println(begin);
+        System.out.println(end);
+        str = str.subSequence(end,str.indexOf(";")).toString();
+        System.out.println(str);
+    }
 
     private String getAction() {
         String action = "package com.rgy.test.action;\n"
@@ -173,5 +195,7 @@ public class CreateTable {
         String daoImpl = "";
         return daoImpl;
     }
+    
+    
 
 }
