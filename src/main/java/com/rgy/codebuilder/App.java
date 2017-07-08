@@ -61,20 +61,20 @@ public class App extends Application {
         //判断,是否存在模版表
         DerbyJdbc jdbc = new DerbyJdbc();
         isNotExists = jdbc.tableIsNotExists("TEMP");
-        System.out.println(isNotExists);
+//        System.out.println(isNotExists);
         //如果不存在,执行构造语句
         if (isNotExists) {
-            System.out.println("数据库表结构-未存在");
-            System.out.println("构造表结构-启动");
+//            System.out.println("数据库表结构-未存在");
+//            System.out.println("构造表结构-启动");
             try {
                 InitTableJdbc.InitTableJdbc();
             } catch (Exception e) {
-                System.out.println("构造表结构-失败");
+//                System.out.println("构造表结构-失败");
             }
-            System.out.println("构造表结构-完成");
+//            System.out.println("构造表结构-完成");
         } //如果存在则什么都不执行
         else {
-            System.out.println("数据库表结构-已存在");
+//            System.out.println("数据库表结构-已存在");
         }
 
     }
@@ -93,11 +93,11 @@ public class App extends Application {
     }
 
     private static void insertTest() {
-        DerbyJdbc jdbc = new DerbyJdbc();
-        jdbc.add("insert into temp values('001','模版1','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
-        jdbc.add("insert into temp values('002','模版2','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
-        jdbc.add("insert into temp values('003','模版3','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
-        jdbc.add("insert into temp values('004','模版4','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
+//        DerbyJdbc jdbc = new DerbyJdbc();
+//        jdbc.add("insert into temp values('001','模版1','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
+//        jdbc.add("insert into temp values('002','模版2','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
+//        jdbc.add("insert into temp values('003','模版3','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
+//        jdbc.add("insert into temp values('004','模版4','action模版','service模版','serviceImpl模版','dao模版','daoImpl模版')");
     }
 
     private static void queryTest() {

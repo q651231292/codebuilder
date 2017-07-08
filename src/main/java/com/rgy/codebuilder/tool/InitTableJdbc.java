@@ -20,21 +20,23 @@ public class InitTableJdbc {
 //    }
         public static void InitTableJdbc(){
             createTable();
-        insertTest();
-        queryTest();
+//        insertTest();
+//        queryTest();
         }
 
     private static void createTable() {
-        DerbyJdbc jdbc = new DerbyJdbc();
-        jdbc.add("create table temp(\n"
-                + "    id varchar(32) primary key, \n"
-                + "    name varchar(255),\n"
-                + "    action varchar(255),\n"
-                + "    service varchar(255),\n"
-                + "    service_impl varchar(255),\n"
-                + "    dao varchar(255),\n"
-                + "    dao_impl varchar(255)\n"
-                + ")");
+        DerbyJdbc dj = new DerbyJdbc();
+        String sql = "";
+        sql += "create table temp("
+                + "    id varchar(36) primary key,"
+                + "    name varchar(32672),"
+                + "    action varchar(32672),"
+                + "    service varchar(32672),"
+                + "    serviceImpl varchar(32672),"
+                + "    dao varchar(32672),"
+                + "    daoImpl varchar(32672)"
+                + ")";
+        dj.dml(sql);
     }
 
     private static void insertTest() {

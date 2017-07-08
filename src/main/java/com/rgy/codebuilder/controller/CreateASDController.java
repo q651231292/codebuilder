@@ -24,6 +24,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
@@ -60,7 +62,8 @@ public class CreateASDController implements Initializable {
     }
 
     @FXML
-    private void createASD(ActionEvent event) throws IOException, InterruptedException {
+    private boolean createASD(ActionEvent event) throws IOException, InterruptedException {
+        boolean isSuccess = true;
         String packName = packageName.getText();
         String modelName = classAllName.getText();
         String modelShortName = getModelShortName(modelName);
@@ -79,12 +82,28 @@ public class CreateASDController implements Initializable {
         List<Map<String, Object>> list = dj.query(sql);
         Map<String, Object> temp = list.get(0);
         for (int i = 0; i < fileTypes.length; i++) {
-            writeASD(temp, packName, modelName, modelShortName, modelShortNameObj, outPath, fileTypes[i], tempKeys[i]);
+            isSuccess = writeASD(temp, packName, modelName, modelShortName, modelShortNameObj, outPath, fileTypes[i], tempKeys[i]);
+        }
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("消息提示框");
+        alert.setHeaderText(null);
+        if (isSuccess) {
+
+            alert.setContentText("构建成功!");
+
+            alert.showAndWait();
+            return true;
+        } else {
+            alert.setContentText("构建失败!");
+
+            alert.showAndWait();
+            return false;
+
         }
 
     }
 
-    private void writeASD(Map<String, Object> temp, String packName, String modelName, String modelShortName, String modelShortNameObj, String outPath, String fileType, String tempKey) {
+    private boolean writeASD(Map<String, Object> temp, String packName, String modelName, String modelShortName, String modelShortNameObj, String outPath, String fileType, String tempKey) {
         String value = temp.get(tempKey).toString();
         value = value.replace("(packName)", packName);
         value = value.replace("(modelName)", modelName);
@@ -94,7 +113,8 @@ public class CreateASDController implements Initializable {
         String packPath = realPackName.replace(".", "/") + "/";
         String realPath = outPath + packPath;
         String fileName = modelShortName + fileType + ".java";
-        FileTool.write(realPath, fileName, value);
+        boolean isSuccess = FileTool.write(realPath, fileName, value);
+        return isSuccess;
     }
 
     @FXML
@@ -104,9 +124,7 @@ public class CreateASDController implements Initializable {
 
     @FXML
     public void addTempListTo(ActionEvent actionEvent) {
-        System.out.println("进入模版管理器-准备");
         App.replaceScene("template/tempManager.fxml");
-        System.out.println("进入模版管理器-完成");
     }
 
     @FXML
