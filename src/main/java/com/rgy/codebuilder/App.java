@@ -30,9 +30,7 @@ public class App extends Application {
 
         App.stage = primarStage;
         App.replaceScene("codeBuilder.fxml");
-        System.out.println("构建项目表结构-准备");
         initTable();
-        System.out.println("构建项目表结构-完毕");
 
     }
 

@@ -72,11 +72,6 @@ public class CreateASDController implements Initializable {
         String tempName = Global.tempName;
         String[] fileTypes = {"Action", "Service", "ServiceImpl", "Dao", "DaoImpl"};
         String[] tempKeys = {"ACTION", "SERVICE", "SERVICEIMPL", "DAO", "DAOIMPL"};
-        System.out.println(packName);
-        System.out.println(modelName);
-        System.out.println(modelShortName);
-        System.out.println(modelShortNameObj);
-        System.out.println(outPath);
         DerbyJdbc dj = new DerbyJdbc();
         String sql = "select * from temp where name = '" + tempName + "'";
         List<Map<String, Object>> list = dj.query(sql);
@@ -130,9 +125,7 @@ public class CreateASDController implements Initializable {
     @FXML
     private void selectTempList(ActionEvent event) {
         ComboBox cb = (ComboBox) event.getSource();
-        System.out.println(cb);
         Object cbvalue = cb.getValue();
-        System.out.println(cbvalue);
         String tempName = cbvalue.toString();
         Global.tempName = tempName;
 

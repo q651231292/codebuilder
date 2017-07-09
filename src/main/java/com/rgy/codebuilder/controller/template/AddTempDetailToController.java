@@ -33,7 +33,6 @@ public class AddTempDetailToController implements Initializable {
             Temp.name = tempName.getText();
             DerbyJdbc dj = new DerbyJdbc();
             String sql = "update temp set name = '" + Temp.name + "',action='" + Temp.action + "',service='" + Temp.service + "',serviceImpl = '" + Temp.serviceImpl + "',dao='" + Temp.dao + "',daoImpl='" + Temp.daoImpl + "' where id = '" + Temp.id + "'";
-            System.out.println(sql);
             int flg = dj.dml(sql);
             if (true) {
                 Temp.clear();
@@ -46,20 +45,15 @@ public class AddTempDetailToController implements Initializable {
     }
 
     private void insertTemp() {
-        System.out.println("保存模板-准备");
         DerbyJdbc dj = new DerbyJdbc();
         String sql = "";
         String id = UUID.randomUUID().toString();
         sql += "insert into temp values('" + id + "','" + tempName.getText() + "','"+Temp.action+"','"+Temp.service+"','"+Temp.serviceImpl+"','"+Temp.dao+"','"+Temp.daoImpl+"')";
-        System.out.println(sql);
         int flg = dj.dml(sql);
-        System.out.println("保存模板到数据库,execute result :" + flg);
         if (true) {
-            System.out.println("保存模板-true");
             Temp.clear();
             App.replaceScene("template/tempManager.fxml");
         } else {
-            System.out.println("保存模板-false");
         }
     }
 
